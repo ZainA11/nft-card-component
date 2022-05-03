@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueMainBG: hsl(217, 54%, 11%);
+    --veryDarkBlueCardBG: hsl(216, 50%, 16%);
+    --veryDarkBlueLine: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.125rem;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryDarkBlueMainBG);
+    color: var(--softBlue);
+    line-height: 1.7;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+    background-color: var(--veryDarkBlueCardBG);
+    max-width: 400px;
+    min-width: 321px;
+    height: auto;
+    border-radius: 3%;
+}
+.img-container{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
+}
+.img-container img{
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: var(--cyan);
+}
+.icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.img-container:hover .overlay {
+    opacity: 0.65;
+    cursor: pointer;
+}
+  
+.card-container h3{
+    color: var(--white);
+    margin-top: 1rem;
+}
+.card-container h3:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.details .price{
+    color: var(--cyan);
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--veryDarkBlueLine);
+}
+.creator img{
+    max-width: 30px;
+    margin-right: 0.7rem;
+}
+.creator span{
+    color: var(--white);
+    margin-left: 0.5rem;
+}
+.creator span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
